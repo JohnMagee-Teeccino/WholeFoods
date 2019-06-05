@@ -10,6 +10,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid"> 
+      <% if !flash.empty? %>
+        <% flash.each do |key, value| %>
+          <%= content_tag :div, value, class: "alert alert-#{key}" %>
+        <% end %>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
