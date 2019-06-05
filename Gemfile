@@ -41,11 +41,14 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'database_cleaner'
+  gem 'factory_bot_rails'
 end
 
 group :test do
 	gem 'capybara'
 	gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
 end
 
 group :development do
